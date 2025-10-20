@@ -5,7 +5,7 @@
 This project provides a suite of Python scripts to create high-quality, stable timelapses of 3D prints from printers that offer a JSON-based API (such as PrusaLink). It is designed specifically for **fixed-bed (Cartesian)** printers where the bed only moves along the Z-axis. It was developed and tested against a Prusa Core One, but assuming your printer has an API which exposes Z-axis height, and your camera has an rtsp stream, it should work for other printers too.
 
 The process is split into two main stages:
-R
+
 1. **Monitoring:** A script actively monitors a printer's API and an RTSP camera stream. It waits for a print to start, records the video feed, and logs the printer's Z-axis position with timestamps.  
 2. **Post-Processing:** A second script analyzes the recorded video and log files to extract one frame for each distinct layer of the print. It includes logic to handle common issues like video stream corruption and produces a final, smooth timelapse video.
 
