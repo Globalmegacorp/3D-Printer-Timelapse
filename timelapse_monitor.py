@@ -243,7 +243,6 @@ def run_monitor():
         print(f"Error stopping video process: {e}. Killing process.")
         video_process.terminate()
 
-    # Updated instruction: removed TIME_DELTA_SECONDS and ACTUAL_VIDEO_DURATION_SECONDS
     print("\nMonitor script finished. Run post-processor next using the session directory:")
     print(f"python3 printer_timelapse_generator.py {SESSION_DIR}")
 
