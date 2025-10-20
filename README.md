@@ -15,7 +15,7 @@ This project evolved significantly to overcome challenges related to video strea
 
 ### **Two-Stage Architecture (Monitor & Post-Processor)**
 
-The workflow is intentionally split into timelapse\_monitor.py and fixed\_bed\_postprocessor.py.
+The workflow is intentionally split into timelapse\_monitor.py and printer\_timelapse\_generator.py
 
 * **Reliability:** This separation isolates the real-time data capture from the CPU-intensive video processing. The monitor's only job is to record data, making it lightweight and less prone to crashing during a long print.  
 * **Iterability:** If you want to change the timelapse framerate, adjust corruption detection, or fix a bug in the processing logic, you can re-run the post-processor on the existing data without needing to re-record a multi-hour print.
@@ -96,7 +96,7 @@ All user-configurable options are located in the config.json file.
 
 1. After the print is finished and the monitor script has exited, run the post-processor script.  
 2. Provide the **session directory name** that was created in Step 2 as a command-line argument.  
-   python3 fixed\_bed\_postprocessor.py "My\_Awesome\_Print\_gcode"
+   python3 printer\_timelapse\_generator.py "My\_Awesome\_Print\_gcode"
 
 3. The script will process the log, extract all the frames, check for and replace corrupt frames, and assemble the final timelapse video inside the session directory.
 
