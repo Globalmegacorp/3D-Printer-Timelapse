@@ -69,7 +69,8 @@ All user-configurable options are located in the config.json file.
 | POLL\_INTERVAL | 1.0 | The time in seconds between API poll requests during monitoring. |
 | REQUIRED\_Z\_CAPTURE\_POS | 10.0 | The maximum Z-height (in mm) for the print to be considered "starting". |
 | REQUIRED\_BED\_TEMP | 50.0 | The minimum bed temperature (in °C) required to start monitoring. |
-| FFMPEG\_TIMELAPSE\_FRAMERATE | 30 | The output framerate for the final timelapse video. |
+| MIN\_FRAMERATE | 15 | Minimum framerate for final timelapse video. |
+| MAX\_FRAMERATE | 60 | Maximum framerate for final timelapse video. |
 | MIN\_Z\_CHANGE\_MM | 0.1 | The minimum Z-axis change (in mm) to be considered a new layer. |
 | MIN\_STABILITY\_COUNT | 3 | The number of consecutive measurements a new Z-height must be held for. |
 | MAX\_LAYER\_HEIGHT\_MM | 1.0 | The maximum Z-axis change to be considered a valid layer (filters out final Z-lifts). |
